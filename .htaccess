@@ -3,7 +3,15 @@ RewriteBase /COLOMBARA_Kebap/
 
 DirectoryIndex index.php
 
+#Fai una root (Regole Routing)
+RewriteRule ^pag2/?$ pages/pag2.php [L,QSA]
+RewriteRule ^pag1/?$ pages/pag1.php [L,QSA]
+RewriteRule ^/?$ pages/index.php [L,QSA]
+RewriteRule ^style?$ components/index.css
+
+# Se richiedo un file (-f) o una directory (-d) la serve
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
-RewriteRule ^(.*)$ index.php [L,QSA]
+#Tutti gli altri non validi redirect su index.php con query string append [QSA]
+RewriteRule ^(.*)$ pages/index.php [L,QSA]
