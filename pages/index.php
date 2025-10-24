@@ -1,6 +1,5 @@
 <?php
-require_once "config.php";
-include "components/navigation.php"
+require_once "../components/config.php";
 ?>
 
 <!doctype html>
@@ -13,7 +12,17 @@ include "components/navigation.php"
     <title><?=$title?></title>
 </head>
 <body>
-<h1><?=$title?></h1>
-<h2>Pagina 2</h2>
+<div>
+    <?php include "../components/navigation.php"; ?>
+    <div>
+        <h1><?=$title?></h1>
+    </div>
+    <?php
+    if(!empty($_GET))
+    {
+        echo "<div>".$_GET['nome']."</div>";
+    }
+    ?>
+</div>
 </body>
 </html>

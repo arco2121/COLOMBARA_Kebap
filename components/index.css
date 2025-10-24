@@ -1,4 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+SAS:wght@100..400&display=swap');
+*
+{
+    font-family: "Playwrite DE SAS";
+    text-align: center;
+}
+html
+{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
 body
 {
+    width: 100%;
+    height: 100%;
     background: #fff98f;
+    margin: 0 auto;
+}
+div,nav
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width:auto;
+    height: auto;
+}
+nav
+{
+    border: solid 4px #ff7a45;
+    padding: 5px;
+    margin: 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+a
+{
+    text-decoration: none;
+}
+.active
+{
+    color: #ff7a45;
 }
